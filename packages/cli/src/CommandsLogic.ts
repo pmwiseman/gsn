@@ -278,7 +278,12 @@ export class CommandsLogic {
             value: stakeValue,
             from: options.from,
             gas: 1e6,
-            gasPrice: options.gasPrice
+            gasPrice: options.gasPrice,
+            common: {
+              customChain: {
+                chainId,
+              }
+            }
           })
         // @ts-ignore
         transactions.push(stakeTx.transactionHash)
